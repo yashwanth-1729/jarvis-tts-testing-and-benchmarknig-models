@@ -65,3 +65,15 @@ npm run dev
 - 2026-09-12: Initial build. Site scaffolded, data layer defined, model candidate
   catalog seeded (unverified placeholders per the investigation plan), primary
   benchmark sentence fixed, deployed to Vercel. No models installed yet.
+- 2026-09-12: Piper Telugu (Maya, Padmavathi, Venkatesh, all `medium`) verified
+  against Hugging Face (exact repo paths, sizes ~63-64 MB, license corrected from
+  a placeholder "MIT" to the actual IIT Madras Indic TTS license that governs the
+  voice weights). Installed in an isolated venv at `pipelines/piper/.venv` via
+  `pip install piper-tts`, ran on CPU with no GPU. Primary sentence synthesized
+  for all three voices and published to `public/audio/<variant-id>/primary.wav`;
+  all three now show `sample_available` and are playable on the live site.
+  Fixed an `AudioPlayer` bug where the duration label stayed at 0:00 when the
+  underlying `<audio>` element's metadata was already loaded before the
+  listeners attached. Not yet benchmarked (Phase 4 of the pipeline);
+  `pipelines/piper/generate_primary.py` recorded informal CPU synthesis
+  times (0.53-5.2s for an ~9-11s clip) but this is not the formal benchmark run.

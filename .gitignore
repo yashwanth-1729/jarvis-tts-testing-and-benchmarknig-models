@@ -1,5 +1,12 @@
 node_modules
 .next
 .env*.local
-public/audio/**/*.wav
 *.log
+
+.vercel
+
+pipelines/*/.venv
+pipelines/*/voices
+pipelines/*/__pycache__
+pipelines/**/*.onnx
+pipelines/**/*.onnx.json

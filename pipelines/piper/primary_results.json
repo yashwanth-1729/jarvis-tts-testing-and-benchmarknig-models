@@ -1,0 +1,26 @@
+[
+  {
+    "variantId": "piper-te-maya-medium",
+    "audioPath": "/audio/piper-te-maya-medium/primary.wav",
+    "sampleRateHz": 22050,
+    "durationSec": 11.018,
+    "synthesisTimeSec": 5.239,
+    "fileSizeKB": 474.5
+  },
+  {
+    "variantId": "piper-te-padmavathi-medium",
+    "audioPath": "/audio/piper-te-padmavathi-medium/primary.wav",
+    "sampleRateHz": 22050,
+    "durationSec": 11.227,
+    "synthesisTimeSec": 0.583,
+    "fileSizeKB": 483.5
+  },
+  {
+    "variantId": "piper-te-venkatesh-medium",
+    "audioPath": "/audio/piper-te-venkatesh-medium/primary.wav",
+    "sampleRateHz": 22050,
+    "durationSec": 8.812,
+    "synthesisTimeSec": 0.534,
+    "fileSizeKB": 379.5
+  }
+]

@@ -1,1 +1,43 @@
-{ "samples": [] }
+{
+  "samples": [
+    {
+      "id": "piper-te-maya-medium-primary",
+      "variantId": "piper-te-maya-medium",
+      "sentenceId": "primary",
+      "audioPath": "/audio/piper-te-maya-medium/primary.wav",
+      "sampleRateHz": 22050,
+      "durationSec": 11.018,
+      "synthesisTimeSec": 5.239,
+      "device": "cpu",
+      "runtime": "piper-tts 1.8.0 (onnxruntime 1.30.0)",
+      "generationParams": { "lengthScale": "default", "noiseScale": "default", "noiseW": "default" },
+      "generatedAt": "2026-09-12T19:29:00Z"
+    },
+    {
+      "id": "piper-te-padmavathi-medium-primary",
+      "variantId": "piper-te-padmavathi-medium",
+      "sentenceId": "primary",
+      "audioPath": "/audio/piper-te-padmavathi-medium/primary.wav",
+      "sampleRateHz": 22050,
+      "durationSec": 11.227,
+      "synthesisTimeSec": 0.583,
+      "device": "cpu",
+      "runtime": "piper-tts 1.8.0 (onnxruntime 1.30.0)",
+      "generationParams": { "lengthScale": "default", "noiseScale": "default", "noiseW": "default" },
+      "generatedAt": "2026-09-12T19:29:00Z"
+    },
+    {
+      "id": "piper-te-venkatesh-medium-primary",
+      "variantId": "piper-te-venkatesh-medium",
+      "sentenceId": "primary",
+      "audioPath": "/audio/piper-te-venkatesh-medium/primary.wav",
+      "sampleRateHz": 22050,
+      "durationSec": 8.812,
+      "synthesisTimeSec": 0.534,
+      "device": "cpu",
+      "runtime": "piper-tts 1.8.0 (onnxruntime 1.30.0)",
+      "generationParams": { "lengthScale": "default", "noiseScale": "default", "noiseW": "default" },
+      "generatedAt": "2026-09-12T19:29:00Z"
+    }
+  ]
+}
