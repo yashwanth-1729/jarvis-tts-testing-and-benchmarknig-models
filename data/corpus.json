@@ -1,0 +1,11 @@
+{
+  "sentences": [
+    {
+      "id": "primary",
+      "category": "primary",
+      "text": "ఈ రోజు సాయంత్రం నీకు కొన్ని ముఖ్యమైన పనులు ఉన్నాయి. ముందుగా అసైన్‌మెంట్ పూర్తి చేసి, తర్వాత రేపటి క్లాస్ కోసం సిద్ధం కావడం మర్చిపోవద్దు.",
+      "isPrimary": true,
+      "notes": "Fixed primary benchmark sentence. Same text used for every model. Do not change once the first sample is generated."
+    }
+  ]
+}

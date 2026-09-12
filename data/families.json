@@ -1,0 +1,14 @@
+{
+  "families": [
+    { "id": "piper", "name": "Piper Telugu", "org": "rhasspy / community", "category": "piper", "homepage": "https://github.com/rhasspy/piper", "license": "MIT (weights vary by voice)" },
+    { "id": "meta-mms", "name": "Meta MMS Telugu", "org": "Meta AI", "category": "meta-mms", "homepage": "https://huggingface.co/facebook/mms-tts-tel", "license": "CC-BY-NC 4.0" },
+    { "id": "ai4bharat-indic-tts", "name": "AI4Bharat Indic-TTS Telugu", "org": "AI4Bharat", "category": "ai4bharat-indic-tts", "homepage": "https://github.com/AI4Bharat/Indic-TTS", "license": "See repo (research use)" },
+    { "id": "vakyansh", "name": "Vakyansh Telugu", "org": "Open-Speech-EkStep", "category": "vakyansh", "homepage": "https://github.com/Open-Speech-EkStep/vakyansh-tts", "license": "MIT" },
+    { "id": "ai4bharat-indicf5", "name": "AI4Bharat IndicF5", "org": "AI4Bharat", "category": "ai4bharat-indicf5", "homepage": "https://huggingface.co/ai4bharat/IndicF5", "license": "See model card" },
+    { "id": "chiluka", "name": "Chiluka TTS", "org": "Seemanth", "category": "chiluka", "homepage": "https://huggingface.co/Seemanth/chiluka-tts", "license": "See model card" },
+    { "id": "chatterbox", "name": "Chatterbox (Indic)", "org": "community", "category": "chatterbox", "homepage": "https://huggingface.co/models?search=chatterbox+telugu", "license": "See model card" },
+    { "id": "ai4bharat-indic-parler", "name": "AI4Bharat Indic Parler-TTS", "org": "AI4Bharat", "category": "ai4bharat-indic-parler", "homepage": "https://huggingface.co/ai4bharat/indic-parler-tts", "license": "Apache 2.0" },
+    { "id": "mahatts", "name": "MahaTTS", "org": "Dubverse", "category": "mahatts", "homepage": "https://huggingface.co/Dubverse/MahaTTSv2", "license": "See repo" },
+    { "id": "discovered", "name": "Discovered Models", "org": "various", "category": "discovered", "notes": "Additional genuinely useful local Telugu TTS models found during investigation." }
+  ]
+}
