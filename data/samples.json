@@ -6,12 +6,14 @@
       "sentenceId": "primary",
       "audioPath": "/audio/piper-te-maya-medium/primary.wav",
       "sampleRateHz": 22050,
-      "durationSec": 11.018,
-      "synthesisTimeSec": 5.239,
+      "durationSec": 11.204,
+      "synthesisTimeSec": 0.704,
+      "peakRamMB": 310.0,
+      "peakRamIsInformal": true,
       "device": "cpu",
       "runtime": "piper-tts 1.8.0 (onnxruntime 1.30.0)",
       "generationParams": { "lengthScale": "default", "noiseScale": "default", "noiseW": "default" },
-      "generatedAt": "2026-09-12T19:29:00Z"
+      "generatedAt": "2026-09-13T01:00:00Z"
     },
     {
       "id": "piper-te-padmavathi-medium-primary",
@@ -19,12 +21,14 @@
       "sentenceId": "primary",
       "audioPath": "/audio/piper-te-padmavathi-medium/primary.wav",
       "sampleRateHz": 22050,
-      "durationSec": 11.227,
-      "synthesisTimeSec": 0.583,
+      "durationSec": 11.482,
+      "synthesisTimeSec": 0.707,
+      "peakRamMB": 311.8,
+      "peakRamIsInformal": true,
       "device": "cpu",
       "runtime": "piper-tts 1.8.0 (onnxruntime 1.30.0)",
       "generationParams": { "lengthScale": "default", "noiseScale": "default", "noiseW": "default" },
-      "generatedAt": "2026-09-12T19:29:00Z"
+      "generatedAt": "2026-09-13T01:00:00Z"
     },
     {
       "id": "piper-te-venkatesh-medium-primary",
@@ -32,12 +36,14 @@
       "sentenceId": "primary",
       "audioPath": "/audio/piper-te-venkatesh-medium/primary.wav",
       "sampleRateHz": 22050,
-      "durationSec": 8.812,
-      "synthesisTimeSec": 0.534,
+      "durationSec": 9.276,
+      "synthesisTimeSec": 0.625,
+      "peakRamMB": 290.0,
+      "peakRamIsInformal": true,
       "device": "cpu",
       "runtime": "piper-tts 1.8.0 (onnxruntime 1.30.0)",
       "generationParams": { "lengthScale": "default", "noiseScale": "default", "noiseW": "default" },
-      "generatedAt": "2026-09-12T19:29:00Z"
+      "generatedAt": "2026-09-13T01:00:00Z"
     },
     {
       "id": "mms-tts-tel-pytorch-primary",
@@ -45,12 +51,14 @@
       "sentenceId": "primary",
       "audioPath": "/audio/mms-tts-tel-pytorch/primary.wav",
       "sampleRateHz": 16000,
-      "durationSec": 10.064,
-      "synthesisTimeSec": 3.341,
+      "durationSec": 10.304,
+      "synthesisTimeSec": 3.424,
+      "peakRamMB": 675.4,
+      "peakRamIsInformal": true,
       "device": "cpu",
       "runtime": "transformers 5.17.0 (torch 2.14.0+cpu)",
       "generationParams": { "note": "default VitsModel forward pass, no custom noise/length scale" },
-      "generatedAt": "2026-09-13T00:00:00Z"
+      "generatedAt": "2026-09-13T01:00:00Z"
     },
     {
       "id": "mms-tts-tel-onnx-primary",
@@ -58,12 +66,14 @@
       "sentenceId": "primary",
       "audioPath": "/audio/mms-tts-tel-onnx/primary.wav",
       "sampleRateHz": 16000,
-      "durationSec": 10.448,
-      "synthesisTimeSec": 2.344,
+      "durationSec": 9.552,
+      "synthesisTimeSec": 1.807,
+      "peakRamMB": 609.2,
+      "peakRamIsInformal": true,
       "device": "cpu",
       "runtime": "onnxruntime 1.30.0",
       "generationParams": { "noiseScale": 0.667, "lengthScale": 1.0, "noiseScaleW": 0.8, "tokenizer": "facebook/mms-tts-tel (transformers AutoTokenizer, reused since same source checkpoint)" },
-      "generatedAt": "2026-09-13T00:00:00Z"
+      "generatedAt": "2026-09-13T01:00:00Z"
     }
   ]
 }

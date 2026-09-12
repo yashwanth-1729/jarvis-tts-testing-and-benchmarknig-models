@@ -4,6 +4,7 @@ import {
   variants,
   familyById,
   samplesForVariant,
+  primarySampleForVariant,
   benchmarkRunsForVariant,
   failuresForVariant,
   corpusSentences,
@@ -11,6 +12,7 @@ import {
 import { StatusBadge } from "@/components/StatusBadge";
 import { AudioPlayer } from "@/components/AudioPlayer";
 import { SIZE_CLASS_LABEL } from "@/lib/status";
+import { formatMB } from "@/lib/format";
 import { ArrowLeft, WarningCircle } from "@phosphor-icons/react/dist/ssr";
 
 export function generateStaticParams() {
@@ -37,6 +39,7 @@ export default async function ModelDetail({
 
   const family = familyById(variant.familyId);
   const samples = samplesForVariant(variant.id);
+  const primarySample = primarySampleForVariant(variant.id);
   const runs = benchmarkRunsForVariant(variant.id);
   const variantFailures = failuresForVariant(variant.id);
 
@@ -82,13 +85,15 @@ export default async function ModelDetail({
               value={variant.requiresVocoder ? (variant.vocoderName ?? "Required, unspecified") : "Not required"}
             />
             <MetaRow label="Size class" value={SIZE_CLASS_LABEL[variant.sizeClass]} />
+            <MetaRow label="Download size" value={formatMB(variant.downloadSizeMB)} />
+            <MetaRow label="Installed disk usage" value={formatMB(variant.installedDiskMB)} />
             <MetaRow
-              label="Download size"
-              value={variant.downloadSizeMB ? `${variant.downloadSizeMB} MB` : "N/A"}
-            />
-            <MetaRow
-              label="Installed disk usage"
-              value={variant.installedDiskMB ? `${variant.installedDiskMB} MB` : "N/A"}
+              label="Peak RAM to run"
+              value={
+                primarySample?.peakRamMB
+                  ? `${formatMB(primarySample.peakRamMB)}${primarySample.peakRamIsInformal ? " (informal)" : ""}`
+                  : "N/A (not yet benchmarked)"
+              }
             />
           </div>
         </div>

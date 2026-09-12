@@ -21,7 +21,8 @@
       "status": "sample_available",
       "verified": true,
       "notes": "Confirmed on Hugging Face 2026-09-12. Single speaker, 22050Hz, trained on IIT Madras Indic TTS Telugu data by fine-tuning the English lessac-medium voice.",
-      "lastUpdated": "2026-09-12T19:29:00Z"
+      "lastUpdated": "2026-09-12T19:29:00Z",
+      "installedDiskMB": 61
     },
     {
       "id": "piper-te-padmavathi-medium",
@@ -44,7 +45,8 @@
       "status": "sample_available",
       "verified": true,
       "notes": "Confirmed on Hugging Face 2026-09-12. Single speaker, 22050Hz, trained on IIT Madras Indic TTS Telugu data.",
-      "lastUpdated": "2026-09-12T19:29:00Z"
+      "lastUpdated": "2026-09-12T19:29:00Z",
+      "installedDiskMB": 61
     },
     {
       "id": "piper-te-venkatesh-medium",
@@ -67,7 +69,8 @@
       "status": "sample_available",
       "verified": true,
       "notes": "Confirmed on Hugging Face 2026-09-12. Single speaker, 22050Hz, trained on IIT Madras Indic TTS Telugu data.",
-      "lastUpdated": "2026-09-12T19:29:00Z"
+      "lastUpdated": "2026-09-12T19:29:00Z",
+      "installedDiskMB": 61
     },
     {
       "id": "mms-tts-tel-pytorch",
@@ -90,7 +93,8 @@
       "status": "sample_available",
       "verified": true,
       "notes": "Confirmed on Hugging Face 2026-09-12. Official Meta checkpoint, safetensors F32, 16000Hz output. Run via transformers VitsModel.",
-      "lastUpdated": "2026-09-13T00:00:00Z"
+      "lastUpdated": "2026-09-13T00:00:00Z",
+      "installedDiskMB": 139
     },
     {
       "id": "mms-tts-tel-onnx",
@@ -112,7 +116,8 @@
       "status": "sample_available",
       "verified": true,
       "notes": "No official Meta or sherpa-onnx-team ONNX export of mms-tts-tel exists. This is a community conversion (willwade/mms-tts-multilingual-models-onnx), confirmed present on Hugging Face 2026-09-12 (model.onnx, tokens.txt, sample.wav in the tel/ folder). Documented here per the plan's instruction to use the correct current source rather than an outdated/nonexistent identifier.",
-      "lastUpdated": "2026-09-13T00:00:00Z"
+      "lastUpdated": "2026-09-13T00:00:00Z",
+      "installedDiskMB": 109
     },
     {
       "id": "mms-tts-tel-sherpa-onnx",

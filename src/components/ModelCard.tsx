@@ -6,6 +6,7 @@ import { SIZE_CLASS_LABEL } from "@/lib/status";
 import { hasPlayableSample } from "@/lib/status";
 import { primarySampleForVariant, familyById } from "@/lib/data";
 import { WarningCircle, MicrophoneStage } from "@phosphor-icons/react/dist/ssr";
+import { formatMB } from "@/lib/format";
 
 export function ModelCard({ variant }: { variant: ModelVariant }) {
   const family = familyById(variant.familyId);
@@ -49,7 +50,22 @@ export function ModelCard({ variant }: { variant: ModelVariant }) {
           <dt className="text-muted-foreground">Framework</dt>
           <dd className="truncate text-right font-medium">{variant.framework}</dd>
         </div>
+        <div className="flex justify-between gap-2">
+          <dt className="text-muted-foreground">Download</dt>
+          <dd className="text-right font-medium">{formatMB(variant.downloadSizeMB)}</dd>
+        </div>
+        <div className="flex justify-between gap-2">
+          <dt className="text-muted-foreground">Peak RAM</dt>
+          <dd className="whitespace-nowrap text-right font-medium">
+            {formatMB(primarySample?.peakRamMB)}
+          </dd>
+        </div>
       </dl>
+      {primarySample?.peakRamMB && primarySample.peakRamIsInformal ? (
+        <p className="-mt-2 text-right text-[10px] text-muted-foreground">
+          Peak RAM figure is informal (single run), not the formal benchmark
+        </p>
+      ) : null}
 
       <div className="min-h-[52px] rounded-xl bg-surface-muted p-3">
         {playable && primarySample ? (

@@ -105,6 +105,8 @@ export interface AudioSample {
   sampleRateHz?: number;
   durationSec?: number;
   synthesisTimeSec?: number;
+  peakRamMB?: number;
+  peakRamIsInformal?: boolean;
   device: DeviceKind | "unknown";
   runtime?: string;
   generationParams?: Record<string, unknown>;
