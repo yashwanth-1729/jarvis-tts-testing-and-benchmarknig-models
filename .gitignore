@@ -8,6 +8,12 @@ node_modules
 pipelines/*/.venv
 pipelines/*/voices
 pipelines/*/models
+pipelines/*/checkpoints
+pipelines/*/tmp
+pipelines/*/TTS
+pipelines/*/Trainer
 pipelines/*/__pycache__
 pipelines/**/*.onnx
 pipelines/**/*.onnx.json
+pipelines/**/*.pth
+pipelines/**/*.zip

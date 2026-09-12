@@ -38,7 +38,12 @@ def main():
         args = args[1:]
 
     proc = subprocess.Popen(
-        args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
+        args,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
     )
     root = psutil.Process(proc.pid)
     peak_bytes = 0

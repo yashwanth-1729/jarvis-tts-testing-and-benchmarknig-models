@@ -74,6 +74,36 @@
       "runtime": "onnxruntime 1.30.0",
       "generationParams": { "noiseScale": 0.667, "lengthScale": 1.0, "noiseScaleW": 0.8, "tokenizer": "facebook/mms-tts-tel (transformers AutoTokenizer, reused since same source checkpoint)" },
       "generatedAt": "2026-09-13T01:00:00Z"
+    },
+    {
+      "id": "indic-tts-te-fastpitch-female-primary",
+      "variantId": "indic-tts-te-fastpitch-female",
+      "sentenceId": "primary",
+      "audioPath": "/audio/indic-tts-te-fastpitch-female/primary.wav",
+      "sampleRateHz": 22050,
+      "durationSec": 10.752,
+      "synthesisTimeSec": 13.559,
+      "peakRamMB": 2359.4,
+      "peakRamIsInformal": true,
+      "device": "cpu",
+      "runtime": "Coqui TTS 0.7.1 fork (gokulkarthik/TTS), torch 2.14.0+cpu, Python 3.11",
+      "generationParams": { "speaker_name": "female", "note": "one ZWNJ character (U+200C) in the source text was silently dropped by the model's vocabulary" },
+      "generatedAt": "2026-09-13T00:00:00Z"
+    },
+    {
+      "id": "indic-tts-te-fastpitch-male-primary",
+      "variantId": "indic-tts-te-fastpitch-male",
+      "sentenceId": "primary",
+      "audioPath": "/audio/indic-tts-te-fastpitch-male/primary.wav",
+      "sampleRateHz": 22050,
+      "durationSec": 10.88,
+      "synthesisTimeSec": 13.03,
+      "peakRamMB": 2358.0,
+      "peakRamIsInformal": true,
+      "device": "cpu",
+      "runtime": "Coqui TTS 0.7.1 fork (gokulkarthik/TTS), torch 2.14.0+cpu, Python 3.11",
+      "generationParams": { "speaker_name": "male", "note": "one ZWNJ character (U+200C) in the source text was silently dropped by the model's vocabulary" },
+      "generatedAt": "2026-09-13T00:00:00Z"
     }
   ]
 }

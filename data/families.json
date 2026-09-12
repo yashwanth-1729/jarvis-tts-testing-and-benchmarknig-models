@@ -2,7 +2,7 @@
   "families": [
     { "id": "piper", "name": "Piper Telugu", "org": "rhasspy / community", "category": "piper", "homepage": "https://github.com/rhasspy/piper", "license": "Piper runtime is MIT; the Telugu voice weights are licensed separately under the IIT Madras Indic TTS license (see each voice's model card)" },
     { "id": "meta-mms", "name": "Meta MMS Telugu", "org": "Meta AI", "category": "meta-mms", "homepage": "https://huggingface.co/facebook/mms-tts-tel", "license": "CC-BY-NC 4.0" },
-    { "id": "ai4bharat-indic-tts", "name": "AI4Bharat Indic-TTS Telugu", "org": "AI4Bharat", "category": "ai4bharat-indic-tts", "homepage": "https://github.com/AI4Bharat/Indic-TTS", "license": "See repo (research use)" },
+    { "id": "ai4bharat-indic-tts", "name": "AI4Bharat Indic-TTS Telugu", "org": "AI4Bharat", "category": "ai4bharat-indic-tts", "homepage": "https://github.com/AI4Bharat/Indic-TTS", "license": "MIT (repo); underlying IIT Madras training data may carry its own terms" },
     { "id": "vakyansh", "name": "Vakyansh Telugu", "org": "Open-Speech-EkStep", "category": "vakyansh", "homepage": "https://github.com/Open-Speech-EkStep/vakyansh-tts", "license": "MIT" },
     { "id": "ai4bharat-indicf5", "name": "AI4Bharat IndicF5", "org": "AI4Bharat", "category": "ai4bharat-indicf5", "homepage": "https://huggingface.co/ai4bharat/IndicF5", "license": "See model card" },
     { "id": "chiluka", "name": "Chiluka TTS", "org": "Seemanth", "category": "chiluka", "homepage": "https://huggingface.co/Seemanth/chiluka-tts", "license": "See model card" },
