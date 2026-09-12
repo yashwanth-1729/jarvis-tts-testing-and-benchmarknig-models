@@ -38,6 +38,32 @@
       "runtime": "piper-tts 1.8.0 (onnxruntime 1.30.0)",
       "generationParams": { "lengthScale": "default", "noiseScale": "default", "noiseW": "default" },
       "generatedAt": "2026-09-12T19:29:00Z"
+    },
+    {
+      "id": "mms-tts-tel-pytorch-primary",
+      "variantId": "mms-tts-tel-pytorch",
+      "sentenceId": "primary",
+      "audioPath": "/audio/mms-tts-tel-pytorch/primary.wav",
+      "sampleRateHz": 16000,
+      "durationSec": 10.064,
+      "synthesisTimeSec": 3.341,
+      "device": "cpu",
+      "runtime": "transformers 5.17.0 (torch 2.14.0+cpu)",
+      "generationParams": { "note": "default VitsModel forward pass, no custom noise/length scale" },
+      "generatedAt": "2026-09-13T00:00:00Z"
+    },
+    {
+      "id": "mms-tts-tel-onnx-primary",
+      "variantId": "mms-tts-tel-onnx",
+      "sentenceId": "primary",
+      "audioPath": "/audio/mms-tts-tel-onnx/primary.wav",
+      "sampleRateHz": 16000,
+      "durationSec": 10.448,
+      "synthesisTimeSec": 2.344,
+      "device": "cpu",
+      "runtime": "onnxruntime 1.30.0",
+      "generationParams": { "noiseScale": 0.667, "lengthScale": 1.0, "noiseScaleW": 0.8, "tokenizer": "facebook/mms-tts-tel (transformers AutoTokenizer, reused since same source checkpoint)" },
+      "generatedAt": "2026-09-13T00:00:00Z"
     }
   ]
 }

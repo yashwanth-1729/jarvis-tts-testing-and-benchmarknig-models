@@ -7,6 +7,7 @@ node_modules
 
 pipelines/*/.venv
 pipelines/*/voices
+pipelines/*/models
 pipelines/*/__pycache__
 pipelines/**/*.onnx
 pipelines/**/*.onnx.json

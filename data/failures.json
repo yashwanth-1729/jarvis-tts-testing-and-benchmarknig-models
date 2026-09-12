@@ -1,1 +1,11 @@
-{ "failures": [] }
+{
+  "failures": [
+    {
+      "id": "mms-tts-tel-sherpa-onnx-inference-crash",
+      "variantId": "mms-tts-tel-sherpa-onnx",
+      "stage": "inference",
+      "message": "sherpa_onnx.OfflineTts.generate() segfaults (native crash, exit code 139) using the sriram09764/itantra-tts-onnx community sherpa-onnx VITS export for Telugu, with sherpa-onnx 1.13.8 on Windows CPU. Model construction/loading succeeds; the crash is inside synthesis and is reproducible even with a single trivial Telugu word ('నమస్తే'), ruling out a text-length or punctuation issue. A separate community ONNX export of the same underlying facebook/mms-tts-tel checkpoint (willwade/mms-tts-multilingual-models-onnx) loads and synthesizes correctly via plain onnxruntime, so the failure is specific to this conversion or to sherpa-onnx's VITS runner expectations for it, not to the environment or the base model.",
+      "timestamp": "2026-09-13T00:00:00Z"
+    }
+  ]
+}

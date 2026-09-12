@@ -77,3 +77,18 @@ npm run dev
   listeners attached. Not yet benchmarked (Phase 4 of the pipeline);
   `pipelines/piper/generate_primary.py` recorded informal CPU synthesis
   times (0.53-5.2s for an ~9-11s clip) but this is not the formal benchmark run.
+- 2026-09-13: Meta MMS Telugu investigated and installed in an isolated venv at
+  `pipelines/mms/.venv`. Three variants: (1) the official `facebook/mms-tts-tel`
+  checkpoint via `transformers.VitsModel` (36.3M params, CC-BY-NC 4.0, 16kHz) -
+  succeeded on CPU, sample published. (2) A generic ONNX export
+  (`willwade/mms-tts-multilingual-models-onnx`) run via plain `onnxruntime`,
+  reusing the official tokenizer's `input_ids` since it is exported from the
+  same checkpoint - succeeded, sample published. (3) A sherpa-onnx-formatted
+  community ONNX export (`sriram09764/itantra-tts-onnx`) - failed: `sherpa-onnx`
+  1.13.8's `OfflineTts.generate()` segfaults during synthesis, reproduced even
+  with a single word, so it is marked `failed` with the crash documented rather
+  than hidden or silently retried. No official k2-fsa sherpa-onnx release exists
+  for Telugu MMS (confirmed against the `tts-models` GitHub release asset list),
+  so the catalog now documents this substitution explicitly instead of using
+  the original placeholder identifier. All three variants' catalog entries were
+  corrected from "to be located" placeholders to verified sources/sizes/licenses.
