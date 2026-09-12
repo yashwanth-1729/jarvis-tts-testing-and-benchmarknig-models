@@ -10,10 +10,13 @@ pipelines/*/voices
 pipelines/*/models
 pipelines/*/checkpoints
 pipelines/*/tmp
+pipelines/*/hf_cache
 pipelines/*/TTS
 pipelines/*/Trainer
 pipelines/*/__pycache__
 pipelines/**/*.onnx
 pipelines/**/*.onnx.json
 pipelines/**/*.pth
+pipelines/**/*.pt
 pipelines/**/*.zip
+pipelines/**/*.safetensors

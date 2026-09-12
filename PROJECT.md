@@ -92,3 +92,25 @@ npm run dev
   so the catalog now documents this substitution explicitly instead of using
   the original placeholder identifier. All three variants' catalog entries were
   corrected from "to be located" placeholders to verified sources/sizes/licenses.
+- 2026-09-13: Investigated and catalog-verified the remaining reference-audio
+  and gated families. `ai4bharat/IndicF5` and `ai4bharat/indic-parler-tts`
+  (Prakash/Lalitha/Kiran) are both real, correctly documented (MIT / Apache
+  2.0, architecture, sizes), but both are gated on Hugging Face and need the
+  project owner's own account + `HF_TOKEN` to download; not something this
+  session can do on its own. `Seemanth/chiluka-tts` returns HTTP 401 for
+  anonymous access and could not be corroborated via search; recorded as
+  unverifiable rather than substituted with an unrelated model. Chatterbox
+  (`shankarpandala/chatterbox-telugu`, `reenigne314/chatterbox-indic-lora`)
+  and `Dubverse/MahaTTSv2` were all confirmed real, public, and
+  Telugu-capable.
+  **Disk-space safety finding:** this host's system drive (C:) was already
+  down to roughly 1-2GB free purely from earlier installs (Python 3.11,
+  several venvs' package caches). Starting to load the
+  shankarpandala/chatterbox-telugu checkpoint (~3GB) pushed Windows to grow
+  its pagefile.sys (also on C:) enough to briefly drop free space to
+  ~250MB, a real risk to the host machine, not just this project. That load
+  was killed deliberately and the partial download cleaned up. Chatterbox
+  (both variants) and MahaTTSv2 (4.6GB, the largest checkpoint in the whole
+  catalog) are deferred until the host has more disk headroom; freed ~1.6GB
+  via `pip cache purge` as an immediate mitigation, but that is not durable
+  headroom. This is a host resource constraint, not a defect in any model.

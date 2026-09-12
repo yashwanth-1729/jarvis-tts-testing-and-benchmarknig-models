@@ -305,38 +305,41 @@
       "id": "chatterbox-indic-lora-telugu",
       "familyId": "chatterbox",
       "name": "Chatterbox Indic LoRA (Telugu)",
-      "architecture": "Chatterbox (LoRA fine-tune)",
+      "architecture": "Chatterbox multilingual (LoRA fine-tune over ResembleAI/chatterbox)",
+      "downloadSizeMB": 165,
       "precision": "unknown",
       "requiresVocoder": false,
-      "framework": "pytorch",
-      "source": "https://huggingface.co/reenigne314/chatterbox-indic-lora (exact Telugu checkpoint to be confirmed)",
-      "license": "See model card",
+      "framework": "pytorch (chatterbox-tts package + repo's own indic-lora loader)",
+      "source": "https://huggingface.co/reenigne314/chatterbox-indic-lora",
+      "license": "MIT",
       "cpuSupport": "untested",
       "gpuSupport": "untested",
       "mobileRelevant": false,
-      "sizeClass": "unknown",
+      "sizeClass": "medium",
       "supportsReferenceAudio": true,
       "status": "not_started",
-      "verified": false,
-      "notes": "Confirm the repo actually ships a Telugu-capable checkpoint before installing."
+      "verified": true,
+      "notes": "Confirmed via Hugging Face API 2026-09-13: public, not gated, ships te_female.pt/te_male.pt conditioning plus a checkpoints/best.pt LoRA adapter (~165MB total). Loads on top of the base ResembleAI/chatterbox model (not bundled here, downloaded separately by the chatterbox-tts package), so total footprint is larger than this repo alone. Not yet attempted: deferred alongside the sibling shankarpandala/chatterbox-telugu variant after a host disk-space safety stop (see that variant's notes)."
     },
     {
       "id": "chatterbox-telugu-shankarpandala",
       "familyId": "chatterbox",
       "name": "Chatterbox Telugu (shankarpandala)",
-      "architecture": "Chatterbox (fine-tune)",
+      "architecture": "Chatterbox multilingual (fine-tune over ResembleAI/chatterbox)",
+      "downloadSizeMB": 3059,
       "precision": "unknown",
       "requiresVocoder": false,
-      "framework": "pytorch",
+      "framework": "pytorch (chatterbox-tts package, ChatterboxMultilingualTTS)",
       "source": "https://huggingface.co/shankarpandala/chatterbox-telugu",
-      "license": "See model card",
+      "license": "CC-BY-4.0",
       "cpuSupport": "untested",
       "gpuSupport": "untested",
       "mobileRelevant": false,
-      "sizeClass": "unknown",
+      "sizeClass": "very_large",
       "supportsReferenceAudio": true,
       "status": "not_started",
-      "verified": false
+      "verified": true,
+      "notes": "Confirmed via Hugging Face API 2026-09-13: public, not gated, self-contained checkpoint (t3_mtl_te.safetensors + s3gen.pt + ve.pt + conds.pt, ~3.06GB). chatterbox-tts 0.1.7 installed cleanly in an isolated venv. Download/load was started (reached file 8/9, ~2GB fetched) then deliberately stopped: this host's system drive (C:) was already down to roughly 1-2GB free from earlier installs, and loading a multi-GB PyTorch model pushed Windows to grow its pagefile.sys (also on C:) enough to briefly drop free space to ~250MB, a real risk of destabilizing the machine, not just this project. Not resumed until more headroom exists or the model is confirmed safe to load in the available RAM; a partially-downloaded blob cache was cleaned up. This is a host resource-safety pause, not a defect in the model itself."
     },
     {
       "id": "indic-parler-tts-prakash",
@@ -429,7 +432,7 @@
       "supportsReferenceAudio": true,
       "status": "not_started",
       "verified": true,
-      "notes": "Confirmed via Hugging Face API and README 2026-09-13: Telugu is explicitly listed as supported (multilingual/cross-lingual voice cloning via wav2vec2/M4T semantic tokens, not a Telugu-specific finetune). Not gated. Requires 3 reference audio clips at inference; the repo only ships Hindi reference speakers, no Telugu ones, so this project's own consistent reference-audio choice will be used instead. Total checkpoint size across 3 files (BigVGAN 450MB + T2S 3.3GB + S2A flow 863MB) = 4.6GB."
+      "notes": "Confirmed via Hugging Face API and README 2026-09-13: Telugu is explicitly listed as supported (multilingual/cross-lingual voice cloning via wav2vec2/M4T semantic tokens, not a Telugu-specific finetune). Not gated. Requires 3 reference audio clips at inference; the repo only ships Hindi reference speakers, no Telugu ones, so this project's own consistent reference-audio choice will be used instead. Total checkpoint size across 3 files (BigVGAN 450MB + T2S 3.3GB + S2A flow 863MB) = 4.6GB. Deliberately not attempted yet: at 4.6GB this is the largest checkpoint in the whole catalog, and loading the shankarpandala/chatterbox-telugu model (a much smaller ~3GB checkpoint) already pushed this host's nearly-full system drive (C:) to a dangerously low ~250MB free via pagefile growth. Deferred until more disk headroom exists on the host."
     }
   ]
 }
