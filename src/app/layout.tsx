@@ -19,9 +19,9 @@ const notoTelugu = Noto_Sans_Telugu({
 });
 
 export const metadata: Metadata = {
-  title: "Telugu TTS Arena",
+  title: "JARVIS Voice Arena",
   description:
-    "Listen to and compare locally-run Telugu text-to-speech models side by side.",
+    "Listen to and compare locally-run text-to-speech models side by side, across languages.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

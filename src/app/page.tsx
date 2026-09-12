@@ -10,10 +10,10 @@ export default function Home() {
     <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-10 px-4 py-10 sm:px-6 lg:px-8">
       <header className="flex flex-col gap-2">
         <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-          Telugu TTS Arena
+          JARVIS Voice Arena
         </h1>
         <p className="max-w-2xl text-sm text-muted-foreground">
-          Listen to every locally-run Telugu text-to-speech model reading the same
+          Listen to every locally-run text-to-speech model reading the same
           sentence, then compare technical benchmarks once they finish running.
         </p>
       </header>

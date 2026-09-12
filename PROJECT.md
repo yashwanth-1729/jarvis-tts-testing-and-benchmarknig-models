@@ -1,9 +1,12 @@
-# Telugu TTS Arena
+# JARVIS Voice Arena
 
-An independent (not-JARVIS) website for comparing locally-run Telugu text-to-speech
-models by listening to the same sentence from each model, then comparing technical
-benchmarks. Audio comparison is the primary goal; benchmarking is secondary and
-happens after a model's sample is already published.
+A website for comparing locally-run text-to-speech models by listening to the same
+sentence from each model, then comparing technical benchmarks. Audio comparison is
+the primary goal; benchmarking is secondary and happens after a model's sample is
+already published. Started as a Telugu-only comparison (`telugu-tts-arena`); the
+name and scope were generalized once English-model benchmarking was added
+alongside it. Deployed independently of the JARVIS app itself, though its findings
+are meant to eventually inform which TTS engines JARVIS uses.
 
 ## Status
 
