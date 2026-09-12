@@ -13,6 +13,7 @@ pipelines/*/tmp
 pipelines/*/hf_cache
 pipelines/*/TTS
 pipelines/*/Trainer
+pipelines/*/repo
 pipelines/*/__pycache__
 pipelines/**/*.onnx
 pipelines/**/*.onnx.json

@@ -11,8 +11,15 @@
       "id": "vakyansh-te-glow-missing-compiler",
       "variantId": "vakyansh-te-glow-female",
       "stage": "install",
-      "message": "Both Vakyansh Telugu Glow-TTS voices require compiling the repo's monotonic_align Cython extension (src/glow_tts/monotonic_align, a setup.py build_ext step) before inference can run. This machine has no C compiler (no cl.exe/MSVC, no gcc), and the system drive (C:) had only about 3GB free at the time, which is too little to safely install Visual Studio Build Tools (typically several GB). Rather than risk filling the system drive for an uncertain build, this was recorded as a failure and the family was skipped. The checkpoints themselves (glow.zip x2, shared hifi.zip vocoder) were verified to exist and download correctly (HTTP 200, correct sizes) at storage.googleapis.com/vakyansh-open-models; this is purely a local build-toolchain gap, not a problem with the model or the checkpoint URLs.",
-      "timestamp": "2026-09-13T00:00:00Z"
+      "message": "Both Vakyansh Telugu Glow-TTS voices require compiling the repo's monotonic_align Cython extension (src/glow_tts/monotonic_align, a setup.py build_ext step) before inference can run. At the time this was first recorded, no C compiler appeared to be on PATH and the system drive (C:) had only about 3GB free, too little to safely install Visual Studio Build Tools. RESOLVED 2026-09-13: Visual Studio 2022 Build Tools with the C++ workload was already installed on this host, just not on PATH; located cl.exe directly via vswhere, ran vcvarsall.bat to capture the MSVC environment, and built monotonic_align successfully. Both voices now have published samples.",
+      "resolvedAt": "2026-09-13T04:31:00Z"
+    },
+    {
+      "id": "vakyansh-te-glow-male-intermittent-segfault",
+      "variantId": "vakyansh-te-glow-male",
+      "stage": "inference",
+      "message": "The male Vakyansh Telugu voice segfaults intermittently during synthesis of the primary sentence on this hardware (2 crashes out of 5 total attempts observed, exit code 139). The female voice, using the same code path and shared vocoder, never crashed across the same testing. Not root-caused: could be a numerical edge case specific to this checkpoint's weights (e.g. in the InvConvNear LU-based invertible convolution) or a Windows-specific native BLAS threading issue, since re-running the identical script with no code changes succeeds most of the time. Not blocking: the published sample is from a successful run, but this instability should be kept in mind before treating this voice as production-reliable.",
+      "timestamp": "2026-09-13T04:34:00Z"
     }
   ]
 }

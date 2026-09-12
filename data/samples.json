@@ -104,6 +104,36 @@
       "runtime": "Coqui TTS 0.7.1 fork (gokulkarthik/TTS), torch 2.14.0+cpu, Python 3.11",
       "generationParams": { "speaker_name": "male", "note": "one ZWNJ character (U+200C) in the source text was silently dropped by the model's vocabulary" },
       "generatedAt": "2026-09-13T00:00:00Z"
+    },
+    {
+      "id": "vakyansh-te-glow-female-primary",
+      "variantId": "vakyansh-te-glow-female",
+      "sentenceId": "primary",
+      "audioPath": "/audio/vakyansh-te-glow-female/primary.wav",
+      "sampleRateHz": 16000,
+      "durationSec": 13.76,
+      "synthesisTimeSec": 4.822,
+      "peakRamMB": 3585.1,
+      "peakRamIsInformal": true,
+      "device": "cpu",
+      "runtime": "vakyansh-tts (Glow-TTS + HiFi-GAN), torch 2.14.0+cpu",
+      "generationParams": { "noiseScale": 0.667, "lengthScale": 1.0 },
+      "generatedAt": "2026-09-13T04:31:00Z"
+    },
+    {
+      "id": "vakyansh-te-glow-male-primary",
+      "variantId": "vakyansh-te-glow-male",
+      "sentenceId": "primary",
+      "audioPath": "/audio/vakyansh-te-glow-male/primary.wav",
+      "sampleRateHz": 16000,
+      "durationSec": 12.896,
+      "synthesisTimeSec": 4.09,
+      "peakRamMB": 3569.5,
+      "peakRamIsInformal": true,
+      "device": "cpu",
+      "runtime": "vakyansh-tts (Glow-TTS + HiFi-GAN), torch 2.14.0+cpu",
+      "generationParams": { "noiseScale": 0.667, "lengthScale": 1.0, "note": "This voice's synthesis intermittently segfaults on this hardware (~1 in 3 runs observed); this sample is from a successful run." },
+      "generatedAt": "2026-09-13T04:34:00Z"
     }
   ]
 }

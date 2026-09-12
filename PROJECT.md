@@ -135,3 +135,19 @@ npm run dev
   same risk. 8 models remain installed and published (Piper x3, MMS x2,
   AI4Bharat Indic-TTS x2 out of the attempted candidates); the deferred and
   blocked ones are all visible and explained on the live site, not hidden.
+- 2026-09-13: Chatterbox (both variants) reclassified from "deferred" to
+  out-of-scope: ResembleAI Chatterbox is designed and tuned for GPU, and this
+  project exists specifically to find models practical on ordinary CPUs, so
+  it does not fit regardless of whether it could eventually be made to run.
+  Root-caused the recurring C: drive fill-ups: this session's own shells had
+  `TEMP`/`TMP` exported as POSIX-style paths (`/d/tmp`), which native Windows
+  processes silently ignore, falling back to the C: default. Fixed by using
+  Windows-style paths (`D:\tmp`) explicitly. Vakyansh Telugu's missing-compiler
+  failure was also resolved: Visual Studio 2022 Build Tools with the C++
+  workload was already installed, just not on PATH; located `cl.exe` via
+  `vswhere`, captured the MSVC build environment via `vcvarsall.bat`, and
+  built the repo's `monotonic_align` Cython extension successfully. Both
+  Vakyansh voices (female, male) now synthesize on CPU and are published;
+  the male voice segfaults intermittently (~1 in 3 runs, not yet
+  root-caused), documented rather than hidden. 10 models now installed and
+  published (Piper x3, MMS x2, AI4Bharat Indic-TTS x2, Vakyansh x2).
