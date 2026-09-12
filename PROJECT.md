@@ -114,3 +114,21 @@ npm run dev
   catalog) are deferred until the host has more disk headroom; freed ~1.6GB
   via `pip cache purge` as an immediate mitigation, but that is not durable
   headroom. This is a host resource constraint, not a defect in any model.
+- 2026-09-13: User confirmed the C: drive constraint directly and asked that
+  everything install to D: going forward. Fixed durably: set persistent user
+  environment variables (`TEMP`, `TMP` -> `D:\tmp`; `PIP_CACHE_DIR` ->
+  `D:\pip-cache`; `HF_HOME` -> `D:\hf-cache`), migrated the existing Hugging
+  Face cache from C: to D:, and cleared the old C: pip cache. Also killed
+  roughly 30 orphaned node/python processes left over from several session
+  restarts earlier in the day, which had caused a Turbopack build to fail
+  outright with a Windows "insufficient system resources" error; the build
+  succeeded immediately after cleanup. Retried `shankarpandala/chatterbox-telugu`
+  with the fixed caches (C: recovered to 2.3-3.3GB free); the checkpoint
+  loaded further this time but the process then stalled (CPU time advanced
+  only ~4-5 seconds over the final 3 minutes of an over 10-minute run) and
+  was killed rather than left running indefinitely. Deferred that variant,
+  its LoRA sibling (`reenigne314/chatterbox-indic-lora`, same base model),
+  and MahaTTSv2 (a still-larger 4.6GB checkpoint) rather than repeat the
+  same risk. 8 models remain installed and published (Piper x3, MMS x2,
+  AI4Bharat Indic-TTS x2 out of the attempted candidates); the deferred and
+  blocked ones are all visible and explained on the live site, not hidden.
